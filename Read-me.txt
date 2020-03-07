@@ -1,0 +1,41 @@
+O Senus é uma aplicação feita em C99, usando os principios do software livre, para cadastramento de usuarios com os campos de usuario, senha e e-mail.
+Esse git é para desenvolvimento da ferramenta. Você poderá fazer downloads desnecessários para a aplicação. Na versão 1.00.0 terá uma otimização de arquivos para uso.
+
+A ideia principal desse projeto é criar uma ferramenta de cadastro de usuários em terminal. Assim você poderá usar esse sistema para cadastros de usuários em alguma outra aplicação.
+
+
+Para instalar o programa (atualmente apenas disponivel o modo desenvolvimento) apenas usar:
+	make senus
+
+Para instalar uma versão anterior apenas usar:
+	make senus?.??.? (onde a interrogação é o numero do que voce deseja instalar)
+
+Para limpar os executaveis e .objetos afim de transportar apenas os arquivos necessários para instalação:
+	make clean 
+
+
+Atualmente está na sua versão 0.01.0 (inicial)
+	Ele conta com as funções:
+		-v (verifica se um usuario existe)
+		-c (cadastra novo usuario)
+		-h (mostra as funções implementadas)
+		-e (entra no sistema (onde terá a chamada para a sua aplicação passando as informações necessárias))
+	Estão previstas
+		-p 
+
+	Atualmente o programa usa hash para as senhas com a função crypt do C e sha512.
+	Atualmente o programa usa um arquivo .txt como banco de dados.
+	
+
+A previsão de alteração para a versão 0.02.0 é
+	Deixar de usar um arquivo .txt como banco de dados e começar a usar mysql.
+	implementar as funções que faltam (modificação de caracteristica dos usuarios).
+
+A previsão de alteração para a versão 0.03.0 é
+	usar o banico de dados para baixar as informações em um struct no C para realizar as buscas em ram no aplicativo.
+	parar de usar getopt e usar getoptlong afim de permitir usar flags longas.
+
+A previsão de aleteração para a versão 0.04.0 é
+	criar um espaço de construção de atributos. Aqui mudaremos essencialmente as flags para, no lugar de várias para modificação de itens especificos, teremos uma unica que será de mudança de atributo genérico de um usuário. 
+
+Quando essa versão estiver em sua versão 1.00.0 terá um make install. Esse instalará o programa e apagará os arquivos de instalação. Assim terá apenas a aplicação. 
